@@ -1,0 +1,42 @@
+<template>
+  <div>
+    <div class="flex flex-wrap gap-8">
+      <div
+        v-for="(tool, index) in tools"
+        :key="index"
+        class="w-1/4 flex flex-col"
+      >
+        <Icon :name="tool.iconClass" style="color: white" size="48"/>
+        <span class="text-lg font-medium">{{ tool.name }}</span>
+        
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<script lang="ts" setup>
+const tools = ref([
+  { name: "Java", iconClass: "devicon:java" },
+  { name: "Vue.js", iconClass: "devicon:vuejs" },
+  { name: "Javascript", iconClass: "devicon:javascript" },
+  { name: "MySQL", iconClass: "devicon:mysql" },
+  { name: "Git", iconClass: "devicon:gitlab" },
+  { name: "Nuxt", iconClass: "devicon:nuxtjs" },
+  { name: "Docker", iconClass: "devicon:docker" },
+  { name: "Linux", iconClass: "devicon:intellij" },
+  { name: "Linux", iconClass: "devicon:linux" },
+  { name: "Trello", iconClass: "devicon:trello"},
+  { name: "Postman", iconClass: "devicon:postman"},
+  { name: "Dbeaver", iconClass: "devicon:dbeaver"},
+  { name: "Hibernate", iconClass: "devicon:hibernate"},
+  { name: "Sourcetree", iconClass: "devicon:sourcetree"},
+  { name: "NGROK", iconClass: "devicon:ngrok"}
+
+]);
+
+</script>
+
+<style scoped>
+/* No extra styles needed, TailwindCSS handles layout and design */
+</style>
