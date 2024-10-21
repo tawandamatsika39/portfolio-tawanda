@@ -23,6 +23,14 @@
       <p class="text-sm text-gray-600 dark:text-gray-400">
         © 2024 Tawanda Matsika. All rights reserved.
       </p>
+      <p class="mt-2">
+        <a 
+          href="https://buymeacoffee.com/tawandamatsika" 
+          target="_blank" 
+          class="text-slate-500 hover:underline">
+          Buy me a coffee ☕
+        </a>
+      </p>
     </footer>
   </div>
 </template>
