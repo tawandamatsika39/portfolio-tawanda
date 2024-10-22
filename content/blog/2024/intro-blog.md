@@ -46,3 +46,5 @@ Look, this blog isn't here to sell you a dream. It's not going to be one of thos
 So, what's next? I'll be posting regularly (or as regularly as one can between coffee refills and debugging nightmares). Stick around if you want to learn, laugh, and maybe avoid a few pitfalls in your own coding journey.Trust me, you'll want to hear the stories I've got lined up.
 
 Until then, keep coding, stay caffeinated, and don't forget to laugh at your code — it's laughing at you, too.
+
+_😎Comments section coming soon! Go on [buy me a coffee](https://buymeacoffee.com/tawandamatsika) to drink whilst coding that for ya!!_

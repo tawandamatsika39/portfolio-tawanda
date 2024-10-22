@@ -25,6 +25,9 @@ export default defineNuxtConfig({
         dark: 'min-dark',
         sepia: 'monokai'
       }
+    },
+    markdown: {
+      anchorLinks :  false
     }
   },
   nitro: {
