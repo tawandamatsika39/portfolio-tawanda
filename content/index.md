@@ -3,7 +3,7 @@
 
 <figure>
   <img src="/images/old-image.jpg" alt="tawanda" width="300"/>
-  <figcaption>Receiving Dean's Award 2019</figcaption>
+  <figcaption>2019 - UWC</figcaption>
 </figure>
 
 [Read more about me and my experience](/about) or check out my [latest projects](/projects).
