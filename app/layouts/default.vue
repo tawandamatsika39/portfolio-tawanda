@@ -24,12 +24,12 @@
         © 2024 Tawanda Matsika. All rights reserved.
       </p>
       <p class="mt-2">
-        <a 
+        <!-- <a 
           href="https://buymeacoffee.com/tawandamatsika" 
           target="_blank" 
           class="text-slate-500 hover:underline">
           Buy me a coffee ☕
-        </a>
+        </a> -->
       </p>
     </footer>
   </div>

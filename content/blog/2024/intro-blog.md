@@ -1,18 +1,18 @@
 ---
-description: A beginner's guide to getting started with Vue 3.
+description: My journey as a software engineer!
 image: /images/vue-logo.png
 head:
   meta:
     - name: 'og:image'
       content: /images/vue-logo.png
-publishedAt: 2020-04-12 17:15:00
+publishedAt: 2024-11-08 18:30:00
 toc: true
 ---
-# The Joy of Building: My Journey as a Software Engineer
+# My Journey as a Software Engineer
 
 ![african programmer](/images/young-african-programmer.jpeg)
 
-## **The Code Conundrum: My Journey as a Software Engineer**
+## **I mean, where the 'frell' should I really even start 🤔?**
 
 So here we are—my very first blog post! 🎉 I could start by telling you how I’ve always dreamed of being a software engineer since I was a wide-eyed child, doodling on the back of napkins with visions of code dancing in my head. But let’s be real for a moment: my journey into this world was less of a graceful leap and more of a lifecheck—a realization that led me into a field I’ve come to learn and love over the years, where problem-solving and creativity collide in ways I never expected.
 
@@ -30,9 +30,9 @@ But hey, when it works, it feels like alchemy. Suddenly, all that chaos turns in
 
 Ah, the good ol' "Hello, World!"—the software engineer's baby steps into this wild, unforgiving world. The first time you see those words printed on the screen, you think, "Wow, I'm basically a genius." Fast forward a few months, and you're staring at your code thinking, "Why is this entire thing on fire?"
 
-Somewhere between those two moments, you learn that coding is about making slightly fewer mistakes each time. Now, instead of simple scripts, I'm wrangling complex apps—stuff that handles payments, ranks places, and deals with enough data to make your head spin. If "Hello, World!" was child's play, this stuff is like juggling chainsaws while riding a unicycle. But you know what? I wouldn't have it any other way.
+Somewhere between those two moments, you learn that coding is about making slightly fewer mistakes each time. Now, instead of simple scripts, I'm wrangling complex apps—stuff that handles payments, systems used by thousands of people every day, and deals with enough data to make your head spin. If "Hello, World!" was child's play, this stuff is like juggling chainsaws while riding a unicycle. But you know what? I wouldn't have it any other way.
 
-## **Why This Blog Exists: Because Someone Has to Tell the Truth**
+## **Someone Has to Tell the Truth**
 
 Look, this blog isn't here to sell you a dream. It's not going to be one of those motivational "You can code your way to the moon!" kind of spaces. Nope. This is going to be a mix of tech tips, sarcastic rants, and the occasional dose of reality. You'll get:
 
