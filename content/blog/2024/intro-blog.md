@@ -30,7 +30,7 @@ But hey, when it works, it feels like alchemy. Suddenly, all that chaos turns in
 
 Ah, the good ol' "Hello, World!"—the software engineer's baby steps into this wild, unforgiving world. The first time you see those words printed on the screen, you think, "Wow, I'm basically a genius." Fast forward a few months, and you're staring at your code thinking, "Why is this entire thing on fire?"
 
-Somewhere between those two moments, you learn that coding is about making slightly fewer mistakes each time. Now, instead of simple scripts, I'm wrangling complex apps—stuff that handles payments, systems used by thousands of people every day, and deals with enough data to make your head spin. If "Hello, World!" was child's play, this stuff is like juggling chainsaws while riding a unicycle. But you know what? I wouldn't have it any other way.
+Somewhere between those two moments, you learn that coding is about making slightly fewer mistakes each time. Now, instead of simple scripts, I'm wrangling complex apps—stuff that handles payments, systems used by thousands of people every day, and deals with enough data to make your head spin. If "Hello, World!" was child's play, this stuff is like juggling chainsaws while riding a unicycle.
 
 ## **Someone Has to Tell the Truth**
 
