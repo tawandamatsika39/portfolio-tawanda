@@ -13,6 +13,7 @@
       <ClientOnly>
         <ColorModeSelector/>
       </ClientOnly>
+      <SpeedInsights/>
     </header>
     <main class="p-2 mt-10">
       <slot />
@@ -36,6 +37,7 @@
 </template>
 
 <script lang="ts" setup>
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 // const colorMode = useColorMode()
 // console.log(colorMode)
 
