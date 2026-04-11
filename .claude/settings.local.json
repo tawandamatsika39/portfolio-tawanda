@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:za.linkedin.com)",
+      "Bash(find /c/workspace/projects/nuxt/portfolio-tawanda/content/blog -type f -name *.md)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

@@ -14,33 +14,50 @@ toc: true
 
 ## Experience
 
-**Software Engineer Project Lead** | SOLIDitech | Cape Town, South Africa | Apr 2023 - Present
+**Senior Java Engineer** | Lendscape | Cape Town, South Africa | Jul 2025 - Present
 
-* Participating in requirements gathering meetings to understand project deliverables
-* Engaging with stakeholders to clarify project requirements
-* Analyzing and researching solutions to technical problems
-* Documenting technical solutions
-* Compiling Work Breakdown Structures
-* Implementing solutions for new projects in accordance with project requirements
-* Maintaining code for existing solutions
-* Preparing release branches and deployment artifacts builds
-* Deploying to the production environment
-* Providing technical training to clients
-* Mentoring team members (Software Engineer)
+* Built a regulatory annual percentage rate compliance engine enabling clients to meet financial disclosure requirements
+* Implemented configurable annual percentage rate formula components, allowing per-client compliance customisation without code changes
+* Implemented async background job for resource-intensive invoice-level fee and interest calculations, improving debtor facing system user experiences
+* Raised average annual percentage rate calculation service test coverage to 90%+ through targeted unit testing and refactoring of long standing technical debt
+* Assisted with Cypress tests to improve the automated tests coverage
+* Contributed to the team knowledge sharing sessions 
+
+**Software Engineer Team Lead** | SOLIDitech | Cape Town, South Africa | Nov 2024 - Jun 2025
+
+* Led technical scoping and solution design for concurrent high priority projects
+* Delivered client specific features end-to-end, coordinating stakeholder expectations through production rollout
+* Managed multiple concurrent projects simultaneously, balancing new priorities against existing commitments
+* Facilitated technical discussions between internal teams and external partners, translating requirements into actionable solutions
+* Mentored junior engineers through structured 1:1s, code reviews, and hands-on project guidance
+* Managed emergency production deployments and coordinated release branching for the team
+* Participated in engineering recruitment through practical candidate reviews
+
+**Software Engineer Project Lead** | SOLIDitech | Cape Town, South Africa | Apr 2023 - Nov 2024
+
+* Led end-to-end delivery of a payment gateway integration for the ISP billing platform, becoming team domain expert for bank allocations
+* Delivered module enhancements for the ISP operations platform
+* Scoped and designed solutions for incoming projects, translating business requirements into technical specifications
+* Managed project timelines and stakeholder expectations across multiple concurrent deliverables
+* Coordinated cross-functional teams (devs, QA, product) to ensure alignment and delivery
+* Supported production deployments and managed emergency releases
+
 
 **Software Engineer** | SOLIDitech | Cape Town, South Africa | Dec 2020 - Apr 2023
 
-* Contributed to software development projects as a team member.
-* Implemented unit and integration tests to ensure code quality.
-* Collaborated with third-party systems for integrations.
-* Provided technical training and documentation to clients.
+* Contributed to feature development and enhancements across ISP billing and operations platforms
+* Integrated third-party systems and APIs as part of multi-team collaboration
+* Implemented unit and integration tests to maintain code quality across deliverables
+* Provided technical training and documentation to clients post-deployment
 
 **Software Developer** | Turfsport | Cape Town, South Africa | Oct 2019 - Dec 2020
 
-* Participated in requirements gathering and analysis.
-* Implemented software solutions based on technical specifications.
-* Conducted testing and quality assurance.
-* Provided technical support and troubleshooting.
+* Contributed to TS3, a greenfield web app built to replace the legacy TS2 platform
+* Built microservices for the new service oriented architecture
+* Developed core bet taking functionality within the betting engine
+* Built UI components for the new system
+* Delivered REST API endpoints supporting the new microservice layer
+* Participated in requirements gathering and translated technical specifications into working software
 
 ## Education
 
@@ -69,5 +86,10 @@ toc: true
 
 ## Certifications
 
+* 2024 - Software Architecture: From Developer to Architect (LinkedIn Learning)
+* 2024 - The Complete Spring Boot Development Bootcamp (Udemy)
+* 2024 - Leadership: Practical Leadership Skills (Udemy)
+* 2023 - Build Web Apps with Vue JS 3 & Firebase (Udemy)
+* 2022 - Design Patterns in Java (Udemy)
 * 2022 - Oracle Certified Associate Java SE 8
 

@@ -47,4 +47,3 @@ So, what's next? I'll be posting regularly (or as regularly as one can between c
 
 Until then, keep coding, stay caffeinated, and don't forget to laugh at your code — it's laughing at you, too.
 
-_😎Comments section coming soon! Go on [buy me a coffee](https://buymeacoffee.com/tawandamatsika) to drink whilst coding that for ya!!_

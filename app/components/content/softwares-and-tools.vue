@@ -18,21 +18,21 @@
 <script lang="ts" setup>
 const tools = ref([
   { name: "Java", iconClass: "devicon:java" },
+  { name: "Spring Boot", iconClass: "devicon:spring" },
   { name: "Vue.js", iconClass: "devicon:vuejs" },
-  { name: "Javascript", iconClass: "devicon:javascript" },
-  { name: "MySQL", iconClass: "devicon:mysql" },
-  { name: "Git", iconClass: "devicon:gitlab" },
   { name: "Nuxt", iconClass: "devicon:nuxtjs" },
+  { name: "Javascript", iconClass: "devicon:javascript" },
+  { name: "TypeScript", iconClass: "devicon:typescript" },
+  { name: "Firebase", iconClass: "devicon:firebase" },
+  { name: "MySQL", iconClass: "devicon:mysql" },
   { name: "Docker", iconClass: "devicon:docker" },
-  { name: "Linux", iconClass: "devicon:intellij" },
   { name: "Linux", iconClass: "devicon:linux" },
-  { name: "Trello", iconClass: "devicon:trello"},
+  { name: "Git", iconClass: "devicon:git" },
   { name: "Postman", iconClass: "devicon:postman"},
   { name: "Dbeaver", iconClass: "devicon:dbeaver"},
   { name: "Hibernate", iconClass: "devicon:hibernate"},
-  { name: "Sourcetree", iconClass: "devicon:sourcetree"},
-  { name: "NGROK", iconClass: "devicon:ngrok"}
-
+  { name: "IntelliJ", iconClass: "devicon:intellij"},
+  { name: "Trello", iconClass: "devicon:trello"},
 ]);
 
 </script>
