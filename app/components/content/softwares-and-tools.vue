@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <div class="flex flex-wrap gap-8">
+  <div class="not-prose">
+    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
       <div
         v-for="(tool, index) in tools"
         :key="index"
-        class="w-1/4 flex flex-col"
+        class="group flex flex-col items-center gap-2 p-4 rounded-xl border border-primary-800/40 bg-night-900/40 backdrop-blur-sm transition-all duration-300 hover:border-neon-400/60 hover:shadow-glow-neon hover:-translate-y-1"
       >
-        <Icon :name="tool.iconClass" style="color: white" size="48"/>
-        <span class="text-lg font-medium">{{ tool.name }}</span>
-        
+        <Icon :name="tool.iconClass" size="40" class="text-gray-300 group-hover:text-neon-300 transition-colors" />
+        <span class="text-xs font-mono text-gray-400 group-hover:text-gray-200">{{ tool.name }}</span>
       </div>
     </div>
   </div>

@@ -16,8 +16,11 @@ export default defineNuxtConfig({
     '@nuxt/icon'
   ],
   colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
     classSuffix: ''
   },
+  css: ['~/assets/css/main.css'],
   content: {
     highlight: {
       theme: {

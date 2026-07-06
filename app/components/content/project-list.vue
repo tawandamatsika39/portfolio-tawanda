@@ -1,22 +1,23 @@
 <template>
   <div class="not-prose">
-    <section v-if="status === 'pending'" class="text-gray-500">Loading projects...</section>
-    <section v-else-if="error" class="text-red-500">Something went wrong... Try again</section>
+    <section v-if="status === 'pending'" class="text-neon-400 animate-pulse">Loading projects...</section>
+    <section v-else-if="error" class="text-ochre-400">Something went wrong... Try again</section>
     <section v-else>
       <div v-for="{ year, repos } in reposByYear" :key="year" class="mb-10">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 pb-2">
-          {{ year }}
+        <h2 class="text-xl font-semibold mb-2 text-gray-300">
+          <span class="text-neon-400">▸</span> {{ year }}
         </h2>
+        <ChevronDivider class="mt-2 mb-4" color-class="text-ochre-600/50 dark:text-ochre-500/40" />
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <a
             v-for="repo in repos"
             :key="repo.id"
             :href="repo.html_url"
             target="_blank"
-            class="flex flex-col border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-150 font-mono"
+            class="group flex flex-col rounded-xl border border-primary-800/30 bg-white/60 dark:bg-night-900/50 backdrop-blur-sm p-4 transition-all duration-300 hover:-translate-y-1 hover:border-neon-400/50 hover:shadow-glow-primary dark:hover:shadow-glow-neon font-mono"
           >
             <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="font-semibold text-sm break-all">{{ repo.name }}</span>
+              <span class="font-semibold text-sm break-all group-hover:text-neon-400 transition-colors">{{ repo.name }}</span>
               <span v-if="repo.stargazers_count > 0" class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 shrink-0">
                 ⭐ {{ repo.stargazers_count }}
               </span>
@@ -30,14 +31,14 @@
               <span
                 v-if="repo.language"
                 :style="{ backgroundColor: languageColor(repo.language) }"
-                class="text-xs text-white px-2 py-0.5 rounded-full"
+                class="text-xs text-white px-2 py-0.5 rounded-full ring-1 ring-white/10"
               >
                 {{ repo.language }}
               </span>
               <span
                 v-for="topic in repo.topics.slice(0, 3)"
                 :key="topic"
-                class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full"
+                class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full ring-1 ring-white/10"
               >
                 {{ topic }}
               </span>

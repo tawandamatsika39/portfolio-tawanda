@@ -1,29 +1,29 @@
 <template>
   <div class="container max-w-6xl mx-auto px-6 py-6">
     <div class="nav flex items-center justify-between font-bold">
-      <div class="hidden h-10 font-alata md:flex md:space-x-8">
+      <div class="hidden h-10 md:flex md:space-x-8">
         <div class="group">
           <NuxtLink to="/" class="link">Home</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
         <div class="group">
           <NuxtLink to="/about" class="link">About</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
         <div class="group">
           <NuxtLink to="/projects" class="link">Projects</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
         <div class="group">
           <NuxtLink to="/blog" class="link">Blog</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
       </div>
       <div class="md:hidden">
         <button
           id="menu-btn"
           type="button"
-          class="z-40 block hamburger md:hidden focus:outline-none"
+          class="z-40 block hamburger md:hidden focus:outline-none rounded hover:shadow-glow-neon transition-shadow duration-200"
           @click="displayMenu"
         >
           <span class="hamburger-top"></span>
@@ -35,23 +35,23 @@
 
     <div
       id="menu"
-      class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-1/2 min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg uppercase dark:bg-slate-950 bg-stone-100 menu-text-color"
+      class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-1/2 min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg uppercase bg-night-950/95 backdrop-blur menu-text-color"
     >
       <div class="group">
           <NuxtLink to="/" class="link" @click="closeMenu">Home</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 w-8 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
         <div class="group">
           <NuxtLink to="/about" class="link" @click="closeMenu">About</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 w-8 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
         <div class="group">
           <NuxtLink to="/projects" class="link" @click="closeMenu">Projects</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 w-8 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
         <div class="group">
           <NuxtLink to="/blog" class="link" @click="closeMenu">Blog</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
+          <div class="mx-2 h-0.5 w-8 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200 bg-gradient-to-r from-primary-500 to-neon-400"></div>
         </div>
     </div>
   </div>
@@ -81,13 +81,31 @@ export default defineComponent({
 
 <style>
 .link {
-  @apply p-1  text-2xl md:text-base
+  @apply relative p-1 text-2xl md:text-base font-display uppercase tracking-wider text-gray-400 transition-colors duration-200;
 }
 
-/* hover:bg-gray-200 dark:hover:bg-gray-800 */
+.link::before {
+  content: '[';
+  @apply opacity-0 -ml-3 mr-0.5 transition-opacity duration-200 text-primary-500;
+}
+
+.link::after {
+  content: ']';
+  @apply opacity-0 -mr-3 ml-0.5 transition-opacity duration-200 text-primary-500;
+}
+
+.link:hover,
+.link.router-link-exact-active {
+  @apply text-neon-400;
+}
+
+.link:hover::before,
+.link:hover::after {
+  @apply opacity-100;
+}
 
 .menu-text-color {
-  color: #8e8c8e;
+  color: #9a9ab0;
 }
 
 .hamburger {
@@ -106,7 +124,7 @@ export default defineComponent({
   height: 2px;
   top: 0;
   left: 0;
-  background: #8e8c8e;
+  background: #22d3ee;
   transition: all 0.5s;
 }
 

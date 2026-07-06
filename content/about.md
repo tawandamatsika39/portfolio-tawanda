@@ -12,6 +12,9 @@ toc: true
 
 🔗I'm dedicated to leveraging technology for the betterment of Africa. I'm open to connecting with fellow tech enthusiasts, professionals, and visionaries who share a passion for African tech growth. Reach out for insightful discussions or collaborations.
 
+::chevron-divider
+::
+
 ## Experience
 
 **Senior Java Engineer** | Lendscape | Cape Town, South Africa | Jul 2025 - Present
@@ -59,11 +62,17 @@ toc: true
 * Delivered REST API endpoints supporting the new microservice layer
 * Participated in requirements gathering and translated technical specifications into working software
 
+::chevron-divider
+::
+
 ## Education
 
 **Bachelor of Science (Honours), Computer Science [Cum Laude]** | University of the Western Cape | Feb 2018 - Dec 2018
 
 **Bachelor of Science, Computer Science [Summa Cum Laude]** | University of the Western Cape | 2015 - 2017
+
+::chevron-divider
+::
 
 ## Accolades
 
@@ -77,12 +86,16 @@ toc: true
 
 **2016 - Dean's Merit Award**  
 
+::chevron-divider
+::
 
-## Programming Languages & Tools
+## Programming Languages & Tools 🛠️
 
 ::softwares-and-tools
 ::
 
+::chevron-divider
+::
 
 ## Certifications
 

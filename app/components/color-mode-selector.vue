@@ -1,6 +1,6 @@
 <template>
   <div class="flex space-x-2 items-center">
-    <div class="text-gray-500 text-xs">Change to {{ nextMode }}</div>
+    <div class="font-mono text-xs text-gray-500">Change to {{ nextMode }}</div>
     <label class="toggle-button">
       <input type="checkbox" @click="toggleMode" />
       <span class="toggle-indicator" :class="nextMode"></span>
@@ -44,30 +44,33 @@ const toggleMode = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #a268dd; /* Default background */
-  border-radius: 20px; /* Adjusted rounded edges */
-  transition: background-color 0.3s;
+  background-color: #c17f3f; /* ochre — light mode state */
+  border-radius: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .toggle-indicator:before {
   position: absolute;
   content: "";
-  height: 16px; /* Reduced height of the knob */
-  width: 16px; /* Reduced width of the knob */
-  left: 2px; /* Adjusted position of the knob */
-  bottom: 2px; /* Adjusted position of the knob */
-  background-color: white; /* Knob color */
-  border-radius: 50%; /* Circle knob */
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
   transition: transform 0.3s;
 }
 
-/* Checked styles */
+/* Checked styles — dark mode state, neon glow */
 input:checked + .toggle-indicator {
-  background-color: #4CAF50; /* Green for the toggle */
+  background-color: #1c1c2b;
+  box-shadow: 0 0 6px rgba(34, 211, 238, 0.7), 0 0 20px rgba(34, 211, 238, 0.4);
 }
 
 input:checked + .toggle-indicator:before {
-  transform: translateX(20px); /* Move knob on toggle */
+  transform: translateX(20px);
+  background-color: #67e8f9;
+  box-shadow: 0 0 6px rgba(34, 211, 238, 0.7);
 }
 
 </style>
