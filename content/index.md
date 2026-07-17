@@ -1,10 +1,5 @@
 # I'm Tawanda Matsika🥷🏽
-# A fullstack software engineer based in Cape Town
-
-<figure>
-  <img src="/images/old-image.jpg" alt="tawanda" width="300"/>
-  <figcaption>2019 - UWC</figcaption>
-</figure>
+### A fullstack software engineer based in Cape Town
 
 [Read more about me and my experience](/about) or check out my [latest projects](/projects).
 
@@ -16,5 +11,3 @@ If you’d like to chat or collaborate on a project, feel free to [reach out on 
 
 ::latest-blog-posts
 ::
-
-

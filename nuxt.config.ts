@@ -16,12 +16,14 @@ export default defineNuxtConfig({
     '@nuxt/icon'
   ],
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
+    preference: 'dark',
+    fallback: 'dark'
   },
   content: {
     highlight: {
       theme: {
-        default: 'min-light',
+        default: 'min-dark',
         dark: 'min-dark',
         sepia: 'monokai'
       }

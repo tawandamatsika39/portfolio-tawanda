@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #000000;
+  }
+
+  /* Background lives on html only: body stays transparent so the fixed
+     negative-z canvas (the starfield) shows through behind content */
+  body {
+    @apply bg-transparent text-stardust font-sans antialiased;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.25);
+    color: #F5F5F7;
+  }
+
+  /* Thin, quiet scrollbar to match the void */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.4);
+  }
+
+}
+
+@layer components {
+  .hairline {
+    border-color: rgba(255, 255, 255, 0.07);
+  }
+
+  .panel {
+    @apply border hairline bg-obsidian/60 backdrop-blur-sm;
+  }
+
+  /* Section label — small, tracked-out, quiet */
+  .section-label {
+    @apply font-sans text-xs uppercase tracking-cosmos text-stardust/60;
+  }
+
+  /* Soft column of darkness behind content so text stays readable
+     over the starfield; the shadow feathers it into the scene */
+  .content-veil {
+    background: rgba(0, 0, 0, 0.62);
+    box-shadow: 0 0 70px 35px rgba(0, 0, 0, 0.62);
+  }
+}
+
+/* ---------- Prose (Nuxt Content) — celestial dark ---------- */
+.prose {
+  --tw-prose-body: #B9BDC4;
+  --tw-prose-headings: #F5F5F7;
+  --tw-prose-links: #F5F5F7;
+  --tw-prose-bold: #F5F5F7;
+  --tw-prose-counters: #9BA0A8;
+  --tw-prose-bullets: rgba(212, 175, 55, 0.5);
+  --tw-prose-hr: rgba(255, 255, 255, 0.07);
+  --tw-prose-quotes: #DDDFE3;
+  --tw-prose-quote-borders: rgba(212, 175, 55, 0.4);
+  --tw-prose-captions: #7C818A;
+  --tw-prose-code: #F5F5F7;
+  --tw-prose-th-borders: rgba(255, 255, 255, 0.12);
+  --tw-prose-td-borders: rgba(255, 255, 255, 0.07);
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.prose :where(a) {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.prose :where(a):hover {
+  border-color: rgba(212, 175, 55, 0.9);
+}
+
+.prose :where(img) {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.prose :where(pre) {
+  background: #0B0B0C !important;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ---------- Motion ---------- */
+@keyframes drift-down {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.3;
+  }
+}
+
+.animate-drift-down {
+  animation: drift-down 2.4s ease-in-out infinite;
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-rise {
+  animation: fade-rise 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift-down,
+  .fade-rise {
+    animation: none;
+  }
+}

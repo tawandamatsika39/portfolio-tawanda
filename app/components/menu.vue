@@ -1,101 +1,84 @@
 <template>
-  <div class="container max-w-6xl mx-auto px-6 py-6">
-    <div class="nav flex items-center justify-between font-bold">
-      <div class="hidden h-10 font-alata md:flex md:space-x-8">
-        <div class="group">
-          <NuxtLink to="/" class="link">Home</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
-        </div>
-        <div class="group">
-          <NuxtLink to="/about" class="link">About</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
-        </div>
-        <div class="group">
-          <NuxtLink to="/projects" class="link">Projects</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
-        </div>
-        <div class="group">
-          <NuxtLink to="/blog" class="link">Blog</NuxtLink>
-          <div class="mx-2 group-hover:border-b border-[#8546c5]"></div>
-        </div>
-      </div>
-      <div class="md:hidden">
-        <button
-          id="menu-btn"
-          type="button"
-          class="z-40 block hamburger md:hidden focus:outline-none"
-          @click="displayMenu"
-        >
-          <span class="hamburger-top"></span>
-          <span class="hamburger-middle"></span>
-          <span class="hamburger-bottom"></span>
-        </button>
-      </div>
+  <nav>
+    <!-- Desktop -->
+    <div class="hidden md:flex md:items-center md:space-x-10">
+      <NuxtLink v-for="item in items" :key="item.to" :to="item.to" class="nav-link">
+        {{ item.label }}
+      </NuxtLink>
     </div>
 
-    <div
-      id="menu"
-      class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-1/2 min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg uppercase dark:bg-slate-950 bg-stone-100 menu-text-color"
+    <!-- Mobile toggle -->
+    <button
+      type="button"
+      class="relative z-[60] block h-6 w-6 md:hidden focus:outline-none"
+      :class="{ open }"
+      aria-label="Toggle menu"
+      @click="open = !open"
     >
-      <div class="group">
-          <NuxtLink to="/" class="link" @click="closeMenu">Home</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
-        </div>
-        <div class="group">
-          <NuxtLink to="/about" class="link" @click="closeMenu">About</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
-        </div>
-        <div class="group">
-          <NuxtLink to="/projects" class="link" @click="closeMenu">Projects</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
-        </div>
-        <div class="group">
-          <NuxtLink to="/blog" class="link" @click="closeMenu">Blog</NuxtLink>
-          <div class="mx-2 group-hover:border-b w-8 border-[#8546c5]"></div>
-        </div>
-    </div>
-  </div>
+      <span class="hamburger-top" />
+      <span class="hamburger-middle" />
+      <span class="hamburger-bottom" />
+    </button>
 
+    <!-- Mobile overlay: teleported to body because the header's backdrop-blur
+         makes it the containing block for fixed descendants, which would clip
+         the overlay to the header bar. Sits below the header (z-40 < z-50)
+         so the hamburger stays tappable. -->
+    <Teleport to="body">
+      <Transition name="veil">
+        <div
+          v-if="open"
+          class="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-10 bg-void/95 backdrop-blur-lg md:hidden"
+        >
+          <NuxtLink
+            v-for="item in items"
+            :key="item.to"
+            :to="item.to"
+            class="nav-link text-lg"
+            @click="open = false"
+          >
+            {{ item.label }}
+          </NuxtLink>
+        </div>
+      </Transition>
+    </Teleport>
+  </nav>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+const open = ref(false)
 
-export default defineComponent({
-  methods: {
-    displayMenu() {
-      const toggleBtn = document.getElementById('menu-btn');
-      const menu = document.getElementById('menu');
-      if (toggleBtn) toggleBtn.classList.toggle('open');
-      if (menu) {
-        menu.classList.toggle('flex');
-        menu.classList.toggle('hidden');
-      }
-    },
-    closeMenu() {
-      this.displayMenu();
-    }
-  }
-});
+const items = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/blog', label: 'Blog' }
+]
+
+const route = useRoute()
+watch(() => route.path, () => {
+  open.value = false
+})
 </script>
 
-<style>
-.link {
-  @apply p-1  text-2xl md:text-base
+<style scoped>
+.nav-link {
+  @apply text-xs font-light uppercase tracking-vast text-stardust transition-colors duration-300 hover:text-snow;
 }
 
-/* hover:bg-gray-200 dark:hover:bg-gray-800 */
-
-.menu-text-color {
-  color: #8e8c8e;
+.nav-link.router-link-active {
+  @apply text-snow;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.6);
+  padding-bottom: 2px;
 }
 
-.hamburger {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  transition: all 0.25s;
-  position: relative;
+.veil-enter-active,
+.veil-leave-active {
+  transition: opacity 0.35s ease;
+}
+.veil-enter-from,
+.veil-leave-to {
+  opacity: 0;
 }
 
 .hamburger-top,
@@ -103,11 +86,11 @@ export default defineComponent({
 .hamburger-bottom {
   position: absolute;
   width: 24px;
-  height: 2px;
-  top: 0;
+  height: 1px;
+  top: 4px;
   left: 0;
-  background: #8e8c8e;
-  transition: all 0.5s;
+  background: #9ba0a8;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hamburger-middle {
@@ -118,19 +101,17 @@ export default defineComponent({
   transform: translateY(14px);
 }
 
-.open {
-  transform: rotate(90deg);
-}
-
 .open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
+  transform: translateY(7px) rotate(45deg);
+  background: #f5f5f7;
 }
 
 .open .hamburger-middle {
-  display: none;
+  opacity: 0;
 }
 
 .open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  transform: translateY(7px) rotate(-45deg);
+  background: #f5f5f7;
 }
 </style>

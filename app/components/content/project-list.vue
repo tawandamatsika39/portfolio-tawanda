@@ -1,49 +1,49 @@
 <template>
   <div class="not-prose">
-    <section v-if="status === 'pending'" class="text-gray-500">Loading projects...</section>
-    <section v-else-if="error" class="text-red-500">Something went wrong... Try again</section>
+    <section v-if="status === 'pending'" class="text-xs uppercase tracking-vast text-stardust/60">Scanning the archive…</section>
+    <section v-else-if="error" class="text-xs uppercase tracking-vast text-stardust/80">Signal lost — try again</section>
     <section v-else>
-      <div v-for="{ year, repos } in reposByYear" :key="year" class="mb-10">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 pb-2">
-          {{ year }}
+      <div v-for="{ year, repos } in reposByYear" :key="year" class="mb-16">
+        <h2 class="mb-6 border-b border-white/[0.07] pb-3">
+          <span class="font-display text-3xl font-semibold text-snow">{{ year }}</span>
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.07] border border-white/[0.07]">
           <a
             v-for="repo in repos"
             :key="repo.id"
             :href="repo.html_url"
             target="_blank"
-            class="flex flex-col border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-150 font-mono"
+            class="group flex flex-col bg-void p-6 transition-colors duration-300 hover:bg-obsidian"
           >
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="font-semibold text-sm break-all">{{ repo.name }}</span>
-              <span v-if="repo.stargazers_count > 0" class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 shrink-0">
-                ⭐ {{ repo.stargazers_count }}
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <span class="text-sm font-medium tracking-orbit uppercase text-snow break-all">{{ repo.name }}</span>
+              <span v-if="repo.stargazers_count > 0" class="flex items-center gap-1 text-xs text-stardust/70 shrink-0">
+                ★ {{ repo.stargazers_count }}
               </span>
             </div>
 
-            <p class="text-xs text-gray-600 dark:text-gray-400 flex-1 mb-3 line-clamp-3">
+            <p class="text-xs font-light leading-relaxed text-stardust flex-1 mb-5 line-clamp-3">
               {{ repo.description || 'No description provided.' }}
             </p>
 
-            <div class="flex flex-wrap gap-1 mb-3">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
               <span
                 v-if="repo.language"
-                :style="{ backgroundColor: languageColor(repo.language) }"
-                class="text-xs text-white px-2 py-0.5 rounded-full"
+                class="flex items-center gap-1.5 text-[10px] uppercase tracking-orbit text-snow/80"
               >
+                <span class="h-1 w-1 rounded-full" :style="{ backgroundColor: languageColor(repo.language) }" />
                 {{ repo.language }}
               </span>
               <span
                 v-for="topic in repo.topics.slice(0, 3)"
                 :key="topic"
-                class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full"
+                class="text-[10px] uppercase tracking-orbit text-stardust/50"
               >
                 {{ topic }}
               </span>
             </div>
 
-            <div class="text-xs text-gray-400 dark:text-gray-500 text-right">
+            <div class="text-[10px] uppercase tracking-orbit text-stardust/40 text-right">
               Updated {{ repo.formattedPushedAt }}
             </div>
           </a>

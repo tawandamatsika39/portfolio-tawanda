@@ -1,17 +1,19 @@
 <template>
   <div>
     <slot :posts="posts">
-      <section class="not-prose font-mono">
-        <div class="column text-gray-400 text-sm">
-          <div>date</div>
-          <div>title</div>
-        </div>
-        <ul>
+      <section class="not-prose">
+        <ul class="divide-y divide-white/[0.07] border-y border-white/[0.07]">
           <li v-for="post in posts" :key="post._path">
-            <NuxtLink :to="post._path" class="column hover:bg-slate-200 dark:hover:bg-slate-800">
-              <div v-if="post.displayYear" class="text-gray-400">{{post.year}}</div>
-              <div v-else class="text-white dark:text-gray-900">****</div>
-              <div>{{post.title}}</div>
+            <NuxtLink :to="post._path" class="group flex items-baseline gap-8 py-6 px-2 transition-colors duration-300 hover:bg-white/[0.03]">
+              <div class="w-14 shrink-0 text-xs uppercase tracking-orbit" :class="post.displayYear ? 'text-stardust/60' : 'text-transparent'">
+                {{ post.year }}
+              </div>
+              <div class="font-display text-xl text-snow md:text-2xl">
+                {{ post.title }}
+              </div>
+              <div class="ml-auto hidden shrink-0 text-[10px] uppercase tracking-vast text-stardust/40 transition-colors duration-300 group-hover:text-stardust md:block">
+                Read
+              </div>
             </NuxtLink>
           </li>
         </ul>
@@ -29,16 +31,16 @@ const props = defineProps({
 })
 
 const {data} = await useAsyncData(
-  'blog-list', 
+  'blog-list',
   ()=> {
     const query = queryContent('/blog').where({_path :{ $ne: '/blog'}})
                             .only(['_path', 'title', 'publishedAt'])
                             .sort({publishedAt: -1})
-    
-    if (props.limit)
-      query.limit(props.limit)                        
 
-    return query.find()                        
+    if (props.limit)
+      query.limit(props.limit)
+
+    return query.find()
   });
 
 
@@ -60,11 +62,3 @@ const {data} = await useAsyncData(
     return result;
   })
 </script>
-
-
-<style sccoped>
-
-.column {
-  @apply flex items-center space-x-8 py-2 border-b border-gray-200 dark:border-gray-700 
-}
-</style>

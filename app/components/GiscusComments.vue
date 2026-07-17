@@ -1,5 +1,5 @@
 <template>
-  <div class="not-prose mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+  <div class="not-prose mt-12 pt-8 border-t border-white/[0.07]">
 
     <div class="relative min-h-[200px]">
       <!-- Giscus always in DOM and visible so it can load normally -->
@@ -19,15 +19,15 @@
       <!-- Skeleton overlaid on top until Giscus fires its ready message -->
       <div
         v-if="!isLoaded"
-        class="absolute inset-0 animate-pulse space-y-6 bg-white dark:bg-slate-900 pt-1"
+        class="absolute inset-0 animate-pulse space-y-6 bg-void pt-1"
       >
-        <div class="h-4 w-32 bg-gray-200 dark:bg-gray-700 rounded" />
+        <div class="h-4 w-32 bg-white/10 rounded" />
         <div v-for="i in 2" :key="i" class="flex gap-3 items-start">
-          <div class="h-8 w-8 rounded-full bg-gray-200 dark:bg-gray-700 shrink-0" />
+          <div class="h-8 w-8 rounded-full bg-white/10 shrink-0" />
           <div class="flex-1 space-y-2 pt-1">
-            <div class="h-3 w-24 bg-gray-200 dark:bg-gray-700 rounded" />
-            <div class="h-3 w-full bg-gray-200 dark:bg-gray-700 rounded" />
-            <div class="h-3 w-4/5 bg-gray-200 dark:bg-gray-700 rounded" />
+            <div class="h-3 w-24 bg-white/10 rounded" />
+            <div class="h-3 w-full bg-white/10 rounded" />
+            <div class="h-3 w-4/5 bg-white/10 rounded" />
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ const colorMode = useColorMode()
 const isLoaded = ref(false)
 
 const giscusTheme = computed(() =>
-  colorMode.value === 'dark' ? 'dark_dimmed' : 'light'
+  colorMode.value === 'dark' ? 'transparent_dark' : 'light'
 )
 
 watch(giscusTheme, (newTheme) => {

@@ -1,16 +1,19 @@
 ---
 description: My journey as a software engineer!
-image: /images/vue-logo.png
+image: /images/old-image.jpg
 head:
   meta:
     - name: 'og:image'
-      content: /images/vue-logo.png
+      content: /images/old-image.jpg
 publishedAt: 2024-11-08 18:30:00
 toc: true
 ---
 # My Journey as a Software Engineer
 
-![african programmer](/images/young-african-programmer.jpeg)
+<figure>
+  <img src="/images/old-image.jpg" alt="tawanda" width="300"/>
+  <figcaption>2019 - UWC</figcaption>
+</figure>
 
 ## **I mean, where the 'frell' should I really even start 🤔?**
 

@@ -33,6 +33,12 @@ const tools = ref([
   { name: "Hibernate", iconClass: "devicon:hibernate"},
   { name: "IntelliJ", iconClass: "devicon:intellij"},
   { name: "Trello", iconClass: "devicon:trello"},
+  { name: "Vaadin", iconClass: "mdi:alpha-v"},
+  { name: "GraphQL", iconClass: "mdi:graphql"},
+  { name: "Claude Code", iconClass: "mdi:robot-outline"},
+  { name: "MSSQL", iconClass: "devicon:microsoftsqlserver"},
+  { name: "Jira", iconClass: "devicon:jira"},
+  { name: "Cypress", iconClass: "devicon:cypressio"},
 ]);
 
 </script>
