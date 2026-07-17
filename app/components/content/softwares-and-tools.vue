@@ -4,11 +4,11 @@
       <div
         v-for="(tool, index) in tools"
         :key="index"
-        class="w-1/4 flex flex-col"
+        class="group w-1/4 flex flex-col"
       >
-        <Icon :name="tool.iconClass" style="color: white" size="48"/>
-        <span class="text-lg font-medium">{{ tool.name }}</span>
-        
+        <Icon :name="tool.iconClass" style="color: white" size="48" class="grayscale transition-all duration-300 group-hover:grayscale-0"/>
+        <span class="text-lg font-medium text-stardust transition-colors duration-300 group-hover:text-snow">{{ tool.name }}</span>
+
       </div>
     </div>
   </div>

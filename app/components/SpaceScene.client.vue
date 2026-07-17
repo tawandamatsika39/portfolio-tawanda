@@ -141,6 +141,7 @@ onMounted(async () => {
   const astronautGroup = new THREE.Group()
   astronautGroup.visible = false
   scene.add(astronautGroup)
+  let astroMat: THREE.MeshStandardMaterial | null = null
 
   new GLTFLoader().load('/models/astronaut.glb', (gltf) => {
     if (disposed) return
@@ -148,8 +149,10 @@ onMounted(async () => {
     const monochrome = new THREE.MeshStandardMaterial({
       color: 0xd8dadf,
       metalness: 0.15,
-      roughness: 0.7
+      roughness: 0.7,
+      transparent: true
     })
+    astroMat = monochrome
     model.traverse((child) => {
       if ((child as THREE.Mesh).isMesh) {
         (child as THREE.Mesh).material = monochrome
@@ -347,10 +350,14 @@ onMounted(async () => {
       moonPlanet.rotation.y = t * 0.09
     }
 
-    // Astronaut: weightless idle float, receding to the right margin on scroll
+    // Astronaut: weightless idle float, receding to the right margin on scroll.
+    // On narrow screens it sits behind the text column, so shrink and fade it.
     if (astronautGroup.visible) {
       const s = scrollSmooth
-      const baseX = isWide() ? 3.6 : 0
+      const wide = isWide()
+      astronautGroup.scale.setScalar(wide ? 1 : 0.6)
+      if (astroMat) astroMat.opacity = wide ? 1 : 0.35
+      const baseX = wide ? 3.6 : 0
       astronautGroup.position.x = baseX + s * 1.6
       astronautGroup.position.y = 0.4 + Math.sin(t * 0.5) * 0.15 - s * 1.4
       astronautGroup.position.z = 2 - s * 6.5
