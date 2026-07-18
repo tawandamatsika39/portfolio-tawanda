@@ -7,6 +7,10 @@ head:
       content: /images/old-image.jpg
 publishedAt: 2024-11-08 18:30:00
 toc: true
+tags:
+  - journey
+  - career
+  - real-talk
 ---
 # My Journey as a Software Engineer
 

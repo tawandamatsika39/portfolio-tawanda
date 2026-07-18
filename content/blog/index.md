@@ -1,2 +1,2 @@
 # Blogs
-::blog-posts
+::blog-posts{:searchable="true"}
