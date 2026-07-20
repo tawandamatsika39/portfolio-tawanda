@@ -14,7 +14,7 @@ tags:
   - product
   - real-talk
 ---
-# How I'm Trying to Fix Zimbabwe's Tech Education Gap
+# Building Bantucode
 
 Youth unemployment in Zimbabwe is enormous, and it's the product of things far bigger than any one app can touch. I'm not going to sit here and pretend a platform fixes an economy. It doesn't, and Bantucode won't.
 

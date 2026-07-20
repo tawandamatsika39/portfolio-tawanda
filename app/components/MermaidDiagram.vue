@@ -40,18 +40,31 @@ onMounted(async () => {
     }
   })
   try {
-    svg.value = (await mermaid.render(id, props.code)).svg
+    const rawSvg = (await mermaid.render(id, props.code)).svg
+    svg.value = forceNativeSize(rawSvg)
   } catch (error) {
     console.error('[mermaid] render failed:', error)
   }
 })
+
+// Mermaid emits width="100%" with no height attribute, which leaves the browser to guess
+// the aspect ratio; that guess sometimes clips wide hand-drawn diagrams instead of scaling
+// them. Setting explicit pixel width/height from the SVG's own viewBox removes the guesswork.
+function forceNativeSize(rawSvg: string): string {
+  const doc = new DOMParser().parseFromString(rawSvg, 'image/svg+xml')
+  const svgEl = doc.documentElement
+  const vb = (svgEl as unknown as SVGSVGElement).viewBox?.baseVal
+  if (vb && vb.width > 0 && vb.height > 0) {
+    svgEl.setAttribute('width', String(vb.width))
+    svgEl.setAttribute('height', String(vb.height))
+  }
+  return new XMLSerializer().serializeToString(svgEl)
+}
 </script>
 
 <style scoped>
 .mermaid-diagram :deep(svg) {
   max-width: none !important;
-  min-width: 900px;
-  width: 100%;
-  height: auto;
+  display: block;
 }
 </style>
