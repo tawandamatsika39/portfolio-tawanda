@@ -23,6 +23,8 @@ And this isn't just a Zimbabwe story. Look at the region and the pattern holds a
 ::unemployment-chart
 ::
 
+One honest caveat on that chart, because I'd rather flag it than have you catch it: it uses the World Bank's modeled ILO estimate, which counts anyone who worked even an hour in the past week as employed. I used it because it's the one methodology applied consistently across all eight countries, which matters for a fair comparison, but it badly flatters economies with huge informal sectors. Zimbabwe's own statistics agency, ZIMSTAT, put the real national unemployment rate at roughly 20 to 22% through 2024, more than double the modeled figure on the chart, and an estimated 80% of the jobs that do exist here are informal: unstable, unprotected, and often barely enough to live on. The chart isn't wrong. It's just answering a narrower question than the one that actually matters to the people living it.
+
 But here's the thing that actually gets me out of bed to work on this: tech skills are a genuine way around that wall. Not because there's suddenly a pile of local jobs waiting, but because remote work has quietly redrawn what "the job market" even means. A company hiring a developer increasingly doesn't care what country you're sitting in when you do the work, and the demand for people who can actually build things keeps outrunning the supply almost everywhere. [Korn Ferry projects a global shortfall of more than 85 million skilled workers by 2030](https://www.kornferry.com/insights/this-week-in-leadership/talent-crunch-future-of-work), risking $8.5 trillion in unrealized revenue, and [research from the World Economic Forum and Cognizant](https://www.weforum.org/stories/2025/12/bridging-the-digital-talent-crisis/) finds that demand for digital skills like AI, data, and technology literacy is accelerating far faster than the global supply of people who have them. In sub-Saharan Africa specifically, the World Bank projects demand for 230 million digitally skilled workers, an opportunity that could unlock up to $130 billion in economic value. A capable developer in Harare can get paid for the same output as one in Cape Town. That is real, it happens every day, and the only reason it doesn't happen far more is that job-ready tech skills here are neither affordable nor credible enough for enough people to go compete for that work.
 
 So that's the actual problem I care about. Not one big vague blob, but a chain of specific, separate walls between a smart, motivated person and that opportunity. Let me walk you through the walls first, because you can't build a good answer until you're honest about the question.
@@ -114,6 +116,7 @@ flowchart TB
 
   subgraph Tools["Tools"]
     AiStudio["AI Studio"]
+    AiTutor["AI Tutor"]
     SocialMedia["Social Media"]
   end
 
