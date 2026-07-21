@@ -2,6 +2,7 @@
   <div class="relative min-h-screen">
     <SpaceScene />
     <ScrollProgress />
+    <ImageLightbox />
 
     <header class="fixed inset-x-0 top-0 z-50 border-b hairline bg-void/70 backdrop-blur-md">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">

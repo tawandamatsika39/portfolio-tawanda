@@ -71,7 +71,7 @@ It goes further than a yes or no on a certificate, too. The platform already gen
 
 Every one of those fixes reaches further when it isn't just sitting on a website waiting for one learner at a time to stumble onto it, and this is the part worth being precise about. Bantucode is my school: an independent online school, teaching tech skills specifically. The software running underneath it is a separate thing called Bantu LMS, and it isn't locked to tech at all. Any school, college, or university can run Bantu LMS as their own learning platform under a support agreement, for whatever subject they actually teach, instead of trying to build and maintain that infrastructure themselves. An institution gets AI-generated course content for its own syllabus, the tutor, a working LMS with progress and assignments, and someone keeping the whole thing running. That's how the fixes above reach a room full of students through the institution already trying to serve them, not one signup at a time. It's also, honestly, how this becomes something that can sustain itself instead of a charity that runs out of evenings.
 
-Here's the whole thing laid out, because "a learning platform" undersells how much is actually under the hood:
+Here's the whole thing laid out the way the product itself organises it, straight off the actual sidebar, because "a learning platform" undersells how much is actually under the hood:
 
 ```mermaid
 flowchart TB
@@ -79,36 +79,46 @@ flowchart TB
 
   subgraph Learning["Learning"]
     Courses["Courses"]
-    Applications["Applications"]
-    Registers["Reports & Registers"]
+    Knowledge["Knowledge Sources"]
   end
 
-  subgraph Engine["AI Engine"]
-    Studio["AI Studio"]
-    Insights["AI Summary"]
-    Sources["Trusted Sources"]
+  subgraph People["People"]
+    Students["Students"]
+    Instructors["Instructors"]
   end
 
-  subgraph Proof["Credentials"]
-    Cards["Student Cards"]
+  subgraph Organization["Organization"]
+    Programs["Programs"]
+    Certificates["Certificates"]
+  end
+
+  subgraph Community["Community"]
+    Discussions["Discussions"]
     Badges["Badges"]
   end
 
-  subgraph Presence["Public Presence"]
-    Website["Website Mgmt"]
-    Social["Social Media"]
+  subgraph Administration["Administration"]
+    SystemConfig["System Config"]
+    InstSettings["Institution Settings"]
   end
 
-  subgraph Ops["Institution Admin"]
-    Config["System Config"]
-    Inst["Institution Mgmt"]
+  subgraph Website["Website"]
+    WebsiteContent["Website Content"]
+    Blog["Blog"]
+  end
+
+  subgraph Tools["Tools"]
+    AiStudio["AI Studio"]
+    SocialMedia["Social Media"]
   end
 
   Core --- Learning
-  Core --- Engine
-  Core --- Proof
-  Core --- Presence
-  Core --- Ops
+  Core --- People
+  Core --- Organization
+  Core --- Community
+  Core --- Administration
+  Core --- Website
+  Core --- Tools
 ```
 
 <figure>
