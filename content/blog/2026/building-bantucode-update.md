@@ -14,7 +14,7 @@ tags:
   - product
   - real-talk
 ---
-# Building Bantucode
+# The Gauntlet Nobody Talks About
 
 Youth unemployment in Zimbabwe is enormous, and it's the product of things far bigger than any one app can touch. I'm not going to sit here and pretend a platform fixes an economy. It doesn't, and Bantucode won't.
 
@@ -29,7 +29,7 @@ But here's the thing that actually gets me out of bed to work on this: tech skil
 
 So that's the actual problem I care about. Not one big vague blob, but a chain of specific, separate walls between a smart, motivated person and that opportunity. Let me walk you through the walls first, because you can't build a good answer until you're honest about the question.
 
-## **The Gauntlet Nobody Talks About**
+## **The Five Walls**
 
 Start at school. In plenty of classrooms the material is years out of date, or the textbook just never showed up. Printing and distributing updated books at scale is expensive and slow, so a teacher ends up improvising from a photocopy, and a class quietly skips whatever didn't make it into the room. That's the first wall: **outdated or missing learning material**. It's not a small inconvenience. It decides what a whole cohort does and doesn't get to learn.
 
@@ -74,7 +74,7 @@ And the trust wall, the one that makes real skill invisible, is answered by cert
 
 It goes further than a yes or no on a certificate, too. The platform already generates an AI performance summary for each student, real strengths and real areas to improve, pulled from their actual grades and engagement rather than a generic pep talk, and today that lives with the student and the institution as a downloadable report you can share. The direction I want to take it in is opening a version of that up to employers directly, so a hiring manager isn't only confirming a piece of paper is genuine, they're seeing how someone actually performed.
 
-## **One Platform, Whole Institutions At Once**
+## **The Software Underneath**
 
 Every one of those fixes reaches further when it isn't just sitting on a website waiting for one learner at a time to stumble onto it, and this is the part worth being precise about. Bantucode is my school: an independent online school, teaching tech skills specifically. The software running underneath it is a separate thing called Bantu LMS, and it isn't locked to tech at all. Any school, college, or university can run Bantu LMS as their own learning platform under a support agreement, for whatever subject they actually teach, instead of trying to build and maintain that infrastructure themselves. An institution gets AI Studio itself, not content I hand them. They connect the AI model they already trust and pay for (Claude and Gemini both work today, more on the way) and build their own courses with it, or skip the AI entirely and write lessons by hand through the same editor, whichever direction actually fits how they work. Alongside that: the tutor, a working LMS with progress and assignments, and someone keeping the whole thing running. That's how the fixes above reach a room full of students through the institution already trying to serve them, not one signup at a time. It's also, honestly, how this becomes something that can sustain itself instead of a charity that runs out of evenings.
 
@@ -142,7 +142,7 @@ I've built the core of this alone so far. Nights and weekends, stacked against c
 
 I don't want this locked to one kind of partner either. Organisations, schools, churches, communities, individuals, companies, anyone who actually aligns with the dream is fair game, not a fixed list I'm working down. One example of what that looks like in practice: partnering with a drug rehabilitation centre to teach young people in recovery real tech skills, not occupational therapy that ends at a certificate, but a genuine shot at future work on the other side. Another: working directly with companies to deliver paid AI and tech training to their teams, which solves a real business need and helps fund the broader mission at the same time. Neither of those happens from one laptop at 2am. They happen when the right people and the right organisations decide this is worth building together.
 
-## **The Honest Part**
+## **How This Actually Gets Built**
 
 I'm building this around client work that pays my actual bills, which means progress happens in whatever hours are left after a full day of someone else's priorities. What makes that workable at all is a full suite of AI agents doing real engineering work alongside me, not a novelty, actual leverage, and regular conversations with people across the ed-tech and AI space who are willing to tell me where an idea is weak instead of just being polite about it. It's not one person shipping in total isolation. It's one person, serious AI tooling, and a widening circle of people who know parts of this space better than I do.
 
