@@ -14,7 +14,7 @@ tags:
   - product
   - real-talk
 ---
-# The Gauntlet Nobody Talks About
+# All Walls Down
 
 Youth unemployment in Zimbabwe is enormous, and it's the product of things far bigger than any one app can touch. I'm not going to sit here and pretend a platform fixes an economy. It doesn't, and Bantucode won't.
 
@@ -30,6 +30,9 @@ But here's the thing that actually gets me out of bed to work on this: tech skil
 So that's the actual problem I care about. Not one big vague blob, but a chain of specific, separate walls between a smart, motivated person and that opportunity. Let me walk you through the walls first, because you can't build a good answer until you're honest about the question.
 
 ## **The Five Walls**
+
+::five-walls-summary
+::
 
 Start at school. In plenty of classrooms the material is years out of date, or the textbook just never showed up. Printing and distributing updated books at scale is expensive and slow, so a teacher ends up improvising from a photocopy, and a class quietly skips whatever didn't make it into the room. That's the first wall: **outdated or missing learning material**. It's not a small inconvenience. It decides what a whole cohort does and doesn't get to learn.
 
@@ -141,6 +144,9 @@ flowchart TB
 I've built the core of this alone so far. Nights and weekends, stacked against client work, one developer shipping in the quiet. And I'm clear-eyed that it cannot stay that way, because a thing meant to reach schools, companies, and community organisations does not scale on one person's spare hours.
 
 I don't want this locked to one kind of partner either. Organisations, schools, churches, communities, individuals, companies, anyone who actually aligns with the dream is fair game, not a fixed list I'm working down. One example of what that looks like in practice: partnering with a drug rehabilitation centre to teach young people in recovery real tech skills, not occupational therapy that ends at a certificate, but a genuine shot at future work on the other side. Another: working directly with companies to deliver paid AI and tech training to their teams, which solves a real business need and helps fund the broader mission at the same time. Neither of those happens from one laptop at 2am. They happen when the right people and the right organisations decide this is worth building together.
+
+::partner-cta
+::
 
 ## **How This Actually Gets Built**
 
